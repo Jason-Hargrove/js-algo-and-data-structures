@@ -13,7 +13,7 @@ const log = console.log;
 // log(2 ** 2);
 // log(Math.pow(2, 2));
 
-// ===== Analyzing Preformance of Array and Objects =====
+// ===== Analyzing Performance of Array and Objects =====
 // Insertion = O(1)
 // Removal = O(1)
 // Searching = O(n)
