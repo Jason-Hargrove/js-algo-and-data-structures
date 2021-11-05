@@ -14,3 +14,24 @@ const log = console.log;
 // log(Math.pow(2, 2));
 
 // ===== Analyzing Preformance of Array and Objects =====
+// Insertion = O(1)
+// Removal = O(1)
+// Searching = O(n)
+// Access = O(1)
+let instructor = {
+  firstName: "Arthur",
+  isInstructor: true,
+  favoriteNumbers: [1,2,3,4]
+}
+//      ▄            ▄                ▄
+//  firstName   isInstructor   favoriteNumbers
+
+// Object.keys = O(n)
+// log(Object.keys(instructor));
+// Object.values = O(n)
+// log(Object.values(instructor));
+// Object.entries = O(n)
+// log(Object.entries(instructor));
+// hasOwnProperty = O()
+// log(instructor.hasOwnProperty("firstName"));
+// log(instructor.hasOwnProperty("dog"));
