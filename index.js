@@ -50,7 +50,7 @@ const log = console.log;
 // Searching = O(n)
 // Access = O(1)
 
-let names = ["Michael", "Melissa", "Andrea"];
+// let names = ["Michael", "Melissa", "Andrea"];
 
 //    Michael"     "Melissa"      "Andrea"
 //       0             1              2
@@ -65,6 +65,20 @@ let names = ["Michael", "Melissa", "Andrea"];
 // sort = O(n * log n)
 // forEach / map / filter / reduce / etc. = O(n)
 
+// let values = [true, {}, [], 2, "awesome"];
 
 
-let values = [true, {}, [], 2, "awesome"];
+// ===== Algorithms and Problem Solving Patterns =====
+
+// What is an algorithm? A process or set of steps to accomplish a certain task.
+
+// How do you improve?
+// 1. Devise a plan for solving problems.
+// 2. Master common problem solving patterns.
+
+// Problem solving
+// * Understand the problem.
+// * Explore concrete examples.
+// * Break it down.
+// * Solve / simplify.
+// * Look back and refactor.
