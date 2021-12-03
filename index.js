@@ -128,14 +128,35 @@ const log = console.log;
 // charCount(null)
 
 // ===============================================================
-// Write a function which takes in a string and returns counts of each character in the string.
+// * Break it Down
 // ===============================================================
+
+/* <--- Start Break it Down Comment.
+
+Example of what it should return.
+charCount("Your PIN number is 1234!")
+    {
+        1: 1,
+        2: 1,
+        3: 1,
+        4: 1,
+        b: 1,
+        e: 1,
+        i: 1,
+        m: 1,
+        n: 1,
+        o: 1,
+        p: 1,
+        r: 2,
+        s: 1,
+        u: 2,
+        y: 1
+    }
+
 // function charCount(str) {
 //     // do something
 //     // return an object with keys that are lowercase alphanumeric characters in a the string;
 // }
-
-const someStr = "Your PIN number is 1234";
 
 function charCount(str) {
     // make object to return at end.
@@ -145,3 +166,30 @@ function charCount(str) {
     // if character is something else (space, period, ect.) don't do anything.
     // return object at end.
 }
+---> end Break it Down Comment */
+
+// ===============================================================
+// * Simplify
+// Solve The Problem - if you can't Solve a Simpler Problem!
+// ===============================================================
+
+function charCount(str) {
+    // make object to return at end.
+    let result = {};
+    // loop over string, for each character...
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        // if the char is a number/letter AND is a key in object, add one to count.
+        if (result[char] > 0) {
+            result[char]++;
+        // if the char is a number/letter AND not in object, add it to the object and set value to 1.
+        } else {
+            result[char] = 1;
+        }
+    }
+    // if character is something else (space, period, ect.) don't do anything.
+    // return object at end.
+    return result;
+}
+log(charCount('hello'))
+
