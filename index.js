@@ -130,13 +130,18 @@ const log = console.log;
 // ===============================================================
 // Write a function which takes in a string and returns counts of each character in the string.
 // ===============================================================
-function charCount(str) {
-    // do something
-    // return an object with keys that are lowercase alphanumeric characters in a the string;
-}
+// function charCount(str) {
+//     // do something
+//     // return an object with keys that are lowercase alphanumeric characters in a the string;
+// }
+
+const someStr = "Your PIN number is 1234";
 
 function charCount(str) {
-    // make object to return at end
-    // loop over string
-    // return object at end
+    // make object to return at end.
+    // loop over string, for each character...
+        // if the char is a number/letter AND is a key in object, add one to count.
+        // if the char is a number/letter AND not in object, add it to the object and set value to 1.
+    // if character is something else (space, period, ect.) don't do anything.
+    // return object at end.
 }
