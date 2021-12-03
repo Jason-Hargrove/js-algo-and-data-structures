@@ -82,3 +82,61 @@ const log = console.log;
 // * Break it down.
 // * Solve / simplify.
 // * Look back and refactor.
+
+// == Understan the problem ==
+//  1. Can I restate the problem in my own words?
+//  2. What are the inputs that go into the problem?
+//  3. What are the outputs that should come from the solution to the problem?
+//  4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem? (You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.)
+//  5. How should I lable the important pieces of data that are a part of the problem?
+
+// ===============================================================
+// Write a function which takes two numbers and returns their sum.
+// ===============================================================
+
+//  1. Can I restate the problem in my own words?
+// implement additon
+//  2. What are the inputs that go into the problem?
+// - ints?
+// - floats?
+// - what about string for large numbers?
+//  3. What are the outputs that should come from the solution to the problem?
+// - int? float? string?
+//  4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem?
+// _____
+//  5. How should I lable the important pieces of data that are a part of the problem?
+// _____
+
+// == Explore concrete examples ==
+//  1. Start with simple examples.
+//  2. Progress to more complex examples.
+//  3. Explore examples with empty inputs.
+//  4. Explore examples with invalid inputs.
+
+// ===============================================================
+// Write a function which takes in a string and returns counts of each character in the string.
+// ===============================================================
+//  1. Start with simple examples.
+// charCount("aaaa"); // {a:4}
+// charCount("hello"); // {h:1, e:1, l:2, o:1}
+//  2. Progress to more complex examples.
+// "my phone number is 182763"
+// "Hello hi"
+//  3. Explore examples with empty inputs.
+// charCount("")
+//  4. Explore examples with invalid inputs.
+// charCount(null)
+
+// ===============================================================
+// Write a function which takes in a string and returns counts of each character in the string.
+// ===============================================================
+function charCount(str) {
+    // do something
+    // return an object with keys that are lowercase alphanumeric characters in a the string;
+}
+
+function charCount(str) {
+    // make object to return at end
+    // loop over string
+    // return object at end
+}
