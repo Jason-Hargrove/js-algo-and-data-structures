@@ -243,30 +243,80 @@ function charCount(str) {
 
 // ===== Are Regular Expressions Efficient? =====
 // Other ways to handle the situation?
-log("hi".charCodeAt(0));
-log("hi".charCodeAt(1));
-log("j".charCodeAt(0));
+// log("hi".charCodeAt(0));
+// log("hi".charCodeAt(1));
+// log("j".charCodeAt(0));
+//
+// function charCount(str) {
+//     let obj = {};
+//     for (let char of str) {
+//         if (isAlphaNumeric(char)) {
+//             char = char.toLowerCase();
+//             obj[char] = ++obj[char] || 1;
+//         }
+//     }
+//     return obj;
+// }
+//
+// // Replace Regular Expression with mathematical comparison with character code.
+// function isAlphaNumeric(char) {
+//     let code = char.charCodeAt(0);
+//     if (!(code > 47 && code < 58) && // numeric (0-9)
+//         !(code > 64 && code < 91) && // upper alpha (A-Z)
+//         !(code > 96 && code < 123)) { // lower alpha (a-z)
+//        return false;
+//     }
+//     return true;
+// }
+//
+// log(charCount('Hello hi!'));
 
-function charCount(str) {
-    let obj = {};
-    for (let char of str) {
-        if (isAlphaNumeric(char)) {
-            char = char.toLowerCase();
-            obj[char] = ++obj[char] || 1;
-        }
-    }
-    return obj;
+// ===============================================================
+// RECAP
+// * Understand the Problem
+// * Explore Concrete Examples
+// * Break It Down
+// * Solve/Simplify
+// * Look Back and Refactor
+// ===============================================================
+
+// ===============================================================
+// HOW DO YOU IMPROVE?
+// 1. Devise a plan for solving problems
+// 2. Master common problem solving patterns
+// ===============================================================
+
+// ===============================================================
+// PROBLEM SOLVING Patterns
+// ===============================================================
+
+// SOME PATTERNS...
+// Frequency Counter
+// Multiple Pointers
+// Sliding Window
+// Divide and Conquer
+// Dynamic Programming
+// Greedy Algorithms
+// Backtracking
+// Many more!
+
+// ===============================================================
+// FREQUENCY COUNTERS
+// ===============================================================
+
+// Write a function called same, which accepts two arrays.
+// The function should return true if every value in the array has it's corresponding value squared in the second array.
+// The frequency of values must be the same.
+
+// same([1,2,3], [4,1,9]) // true
+// same([1,2,3], [1,9]) // false
+// same([1,2,1], [4,4,1]) // false (must be same frequency)
+
+function same(arr1, arr2) {
+ return `${arr1} ${arr2}`
 }
 
-// Replace Regular Expression with mathematical comparison with character code.
-function isAlphaNumeric(char) {
-    let code = char.charCodeAt(0);
-    if (!(code > 47 && code < 58) && // numeric (0-9)
-        !(code > 64 && code < 91) && // upper alpha (A-Z)
-        !(code > 96 && code < 123)) { // lower alpha (a-z)
-       return false;
-    }
-    return true;
-}
+log(same([1,2,3], [4,1,9])) // true
+log(same([1,2,3], [1,9])) // false
+log(same([1,2,1], [4,4,1])) // false (must be same frequency)
 
-log(charCount('Hello hi!'));
