@@ -312,11 +312,78 @@ function charCount(str) {
 // same([1,2,3], [1,9]) // false
 // same([1,2,1], [4,4,1]) // false (must be same frequency)
 
+// === My attempt ===
+// function same(arr1, arr2) {
+//  // initialize an empty array.
+//     const newArr = [];
+//     const compareArr = [];
+//  // arr1 length must equal arr2 length.
+//     if (arr1.length === arr2.length) {
+//         for (let i = 0; i < arr1.length; i++) {
+//             if (Math.pow(arr1[1]) === )
+//             return arr1[i];
+//             // for (let j = 0; j < arr2.length; i++) {
+//             //
+//             // }
+//         }
+//     }
+//  // Take an index and loop through the second arr looking for a match.
+//  // If match with i^2, push to array.
+//  // If arr.length = original arr1.length, return true.
+// }
+// === End My Attempt ===
+
+// === Naive Solution ===
+// function same(arr1, arr2) {
+//     if (arr1.length !== arr2.length) {
+//         return false;
+//     }
+//     for (let i = 0; i < arr1.length; i++) {
+//         let correctIndex = arr2.indexOf(arr1[i] **2)
+//         if(correctIndex === -1) {
+//             return false;
+//         }
+//         log(arr2);
+//         arr2.splice(correctIndex,1)
+//     }
+//     return true;
+// }
+// === End Naive Solution ===
+
+// === Same Refactored Solution ===
+// Time Complexity - O(n)
 function same(arr1, arr2) {
- return `${arr1} ${arr2}`
+    if(arr1.length !== arr2.length) {
+        return false;
+    }
+    let frequencyCounter1 = {};
+    let frequencyCounter2 = {};
+    for (let val of arr1) {
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
+    };
+    for (let val of arr2) {
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
+    };
+    log(frequencyCounter1);
+    log(frequencyCounter2);
+    for (let key in frequencyCounter1) {
+        if(!(key ** 2 in frequencyCounter2)) {
+            return false;
+        }
+        if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
+            return false;
+        }
+    }
+    log(frequencyCounter1);
+    log(frequencyCounter2);
+    return true;
 }
 
-log(same([1,2,3], [4,1,9])) // true
-log(same([1,2,3], [1,9])) // false
-log(same([1,2,1], [4,4,1])) // false (must be same frequency)
+// === End Same Refactored Solution ===
 
+// log(same([1,2,3,2], [9,1,4,4])); // true
+log(same([1,2,3,2,5], [9,1,4,4,11])); // false
+
+// log(same([1,2,3], [4,1,9])) // true
+// log(same([1,2,3], [1,9])) // false
+// log(same([1,2,1], [4,4,1])) // false (must be same frequency)
